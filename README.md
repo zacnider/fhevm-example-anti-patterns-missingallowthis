@@ -62,32 +62,50 @@ euint64 result = FHE.add(value, entropy); // This will work!
 
 ## 🚀 Quick Start
 
-### Prerequisites
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/zacnider/fhevm-example-anti-patterns-missingallowthis.git
+   cd fhevm-example-anti-patterns-missingallowthis
+   ```
 
-- Node.js 18+
-- Hardhat
-- Sepolia Testnet (for FHEVM)
-- **Deployed EntropyOracle contract** (required for entropy examples)
+2. **Install dependencies:**
+   ```bash
+   npm install --legacy-peer-deps
+   ```
 
-### Installation
+3. **Setup environment:**
+   ```bash
+   npm run setup
+   ```
+   Then edit `.env` file with your credentials:
+   - `SEPOLIA_RPC_URL` - Your Sepolia RPC endpoint
+   - `PRIVATE_KEY` - Your wallet private key (for deployment)
+   - `ETHERSCAN_API_KEY` - Your Etherscan API key (for verification)
 
-```bash
-npm install
-```
+4. **Compile contracts:**
+   ```bash
+   npm run compile
+   ```
 
-### Compile
+5. **Run tests:**
+   ```bash
+   npm test
+   ```
+   **Note**: Tests demonstrate both wrong and correct patterns.
 
-```bash
-npm run compile
-```
+6. **Deploy to Sepolia:**
+   ```bash
+   npm run deploy:sepolia
+   ```
 
-### Test
+7. **Verify contract (after deployment):**
+   ```bash
+   npm run verify <CONTRACT_ADDRESS>
+   ```
 
-```bash
-npm test
-```
+**Alternative:** Use the [Examples page](https://entrofhe.vercel.app/examples) for browser-based deployment and verification.
 
-**Note**: Tests demonstrate both wrong and correct patterns.
+---
 
 ## 📖 Usage Example
 
