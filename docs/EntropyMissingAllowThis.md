@@ -1,12 +1,14 @@
 # EntropyMissingAllowThis
 
-Missing FHE.allowThis() permissions with EntropyOracle
+Learn how to missing fhe.allowthis() permissions with encrypted randomness
 
-## Overview
+## 📚 Overview
+
+This example teaches you how to use FHEVM to build privacy-preserving smart contracts.
 
 @title EntropyMissingAllowThis
-@notice Missing FHE.allowThis() permissions with EntropyOracle
-@dev ANTI-PATTERN: Demonstrates common mistake of missing allowThis with EntropyOracle integration
+@notice Missing FHE.allowThis() permissions with encrypted randomness
+@dev ANTI-PATTERN: Demonstrates common mistake of missing allowThis with encrypted randomness integration
 ⚠️ ANTI-PATTERN WARNING:
 Common Mistake:
 - Forgetting to call FHE.allowThis() before using encrypted values
@@ -19,15 +21,15 @@ What Happens:
 - Encrypted values cannot be used in FHE operations
 Solution:
 - Always call FHE.allowThis() after FHE.fromExternal()
-- Always call FHE.allowThis() after getting entropy from EntropyOracle
+- Always call FHE.allowThis() after getting entropy from encrypted randomness
 - This grants the contract permission to use the encrypted value
 
-@notice Constructor - sets EntropyOracle address
-@param _entropyOracle Address of EntropyOracle contract
+@notice Constructor - sets encrypted randomness address
+@param _encrypted randomness Address of encrypted randomness contract
 
 @notice Request entropy
 @param tag Unique tag for this request
-@return requestId Request ID from EntropyOracle
+@return requestId Request ID from encrypted randomness
 
 ❌ ANTI-PATTERN: Missing FHE.allowThis()
 @dev This will fail when trying to use value1 in FHE operations
@@ -44,7 +46,7 @@ Solution:
 ✅ CORRECT: Using FHE.allowThis() for entropy
 @dev This is the correct way to use entropy
 
-@notice Get EntropyOracle address
+@notice Get encrypted randomness address
 
 
 
