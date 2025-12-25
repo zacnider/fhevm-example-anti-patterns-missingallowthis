@@ -1,6 +1,10 @@
 # EntropyMissingAllowThis
 
-Missing FHE.allowThis() permissions with EntropyOracle
+Learn how to missing fhe.allowthis() permissions with encrypted randomness
+
+## 🎓 What You'll Learn
+
+This example teaches you how to use FHEVM to build privacy-preserving smart contracts. You'll learn step-by-step how to implement encrypted operations, manage permissions, and work with encrypted data.
 
 ## 🚀 Quick Start
 
@@ -48,11 +52,13 @@ Missing FHE.allowThis() permissions with EntropyOracle
 
 ---
 
-## 📋 Overview
+## 📚 Overview
+
+This example teaches you how to use FHEVM to build privacy-preserving smart contracts.
 
 @title EntropyMissingAllowThis
-@notice Missing FHE.allowThis() permissions with EntropyOracle
-@dev ANTI-PATTERN: Demonstrates common mistake of missing allowThis with EntropyOracle integration
+@notice Missing FHE.allowThis() permissions with encrypted randomness
+@dev ANTI-PATTERN: Demonstrates common mistake of missing allowThis with encrypted randomness integration
 ⚠️ ANTI-PATTERN WARNING:
 Common Mistake:
 - Forgetting to call FHE.allowThis() before using encrypted values
@@ -65,15 +71,15 @@ What Happens:
 - Encrypted values cannot be used in FHE operations
 Solution:
 - Always call FHE.allowThis() after FHE.fromExternal()
-- Always call FHE.allowThis() after getting entropy from EntropyOracle
+- Always call FHE.allowThis() after getting entropy from encrypted randomness
 - This grants the contract permission to use the encrypted value
 
-@notice Constructor - sets EntropyOracle address
-@param _entropyOracle Address of EntropyOracle contract
+@notice Constructor - sets encrypted randomness address
+@param _encrypted randomness Address of encrypted randomness contract
 
 @notice Request entropy
 @param tag Unique tag for this request
-@return requestId Request ID from EntropyOracle
+@return requestId Request ID from encrypted randomness
 
 ❌ ANTI-PATTERN: Missing FHE.allowThis()
 @dev This will fail when trying to use value1 in FHE operations
@@ -90,15 +96,15 @@ Solution:
 ✅ CORRECT: Using FHE.allowThis() for entropy
 @dev This is the correct way to use entropy
 
-@notice Get EntropyOracle address
+@notice Get encrypted randomness address
 
 
 
-## 🔐 Zama FHEVM Usage
+## 🔐 Learn Zama FHEVM Through This Example
 
-This example demonstrates the following **Zama FHEVM** features:
+This example teaches you how to use the following **Zama FHEVM** features:
 
-### Zama FHEVM Features Used
+### What You'll Learn About
 
 - **ZamaEthereumConfig**: Inherits from Zama's network configuration
   ```solidity
@@ -149,19 +155,20 @@ euint64 result = FHE.add(encryptedValue, FHE.asEuint64(1));
 FHE.allowThis(result);
 ```
 
-### Zama FHEVM Concepts Demonstrated
+### FHEVM Concepts You'll Learn
 
-1. **Encrypted Arithmetic**: Using Zama FHEVM to encrypted arithmetic
-2. **Encrypted Comparison**: Using Zama FHEVM to encrypted comparison
-3. **External Encryption**: Using Zama FHEVM to external encryption
-4. **Permission Management**: Using Zama FHEVM to permission management
-5. **Entropy Integration**: Using Zama FHEVM to entropy integration
+1. **Encrypted Arithmetic**: Learn how to use Zama FHEVM for encrypted arithmetic
+2. **Encrypted Comparison**: Learn how to use Zama FHEVM for encrypted comparison
+3. **External Encryption**: Learn how to use Zama FHEVM for external encryption
+4. **Permission Management**: Learn how to use Zama FHEVM for permission management
+5. **Entropy Integration**: Learn how to use Zama FHEVM for entropy integration
 
 ### Learn More About Zama FHEVM
 
 - 📚 [Zama FHEVM Documentation](https://docs.zama.org/protocol)
 - 🎓 [Zama Developer Hub](https://www.zama.org/developer-hub)
 - 💻 [Zama FHEVM GitHub](https://github.com/zama-ai/fhevm)
+
 
 
 ## 🔍 Contract Code
